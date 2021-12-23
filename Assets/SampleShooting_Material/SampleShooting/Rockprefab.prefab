@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2182124076254010665, guid: 492c389c8ff9221488e7628317e44321, type: 3}
+  m_Sprite: {fileID: -5338410276628327622, guid: 7b31b4ec6c53bb848a4992386d57cf2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62cdf2eb78014084a88275df4774219c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hiragana: []
 --- !u!58 &-230412939233935167
 CircleCollider2D:
   m_ObjectHideFlags: 0
