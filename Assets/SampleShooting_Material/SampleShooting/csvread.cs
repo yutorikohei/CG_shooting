@@ -8,6 +8,11 @@ public class csvread : MonoBehaviour
     public TextAsset csvFile;   　　　　　// GUIでcsvファイルを割当
 　　List<string[]> csvDatas = new List<string[]>(); //ここは参考ブログとは違う
     public Text textUI;
+    public string quiz;
+    public string answer;
+    public int exm;
+    public string word;
+    public string playeranswer = "";
 
 　　　　// Use this for initialization
 　　　　void Start()
@@ -22,10 +27,15 @@ public class csvread : MonoBehaviour
 　　　　　　　　}
 
         // 書き出し
-        var number = Random.Range(0, 19);
+        var number = Random.Range(1, 2);
         textUI.text = csvDatas[number][0];
 
-        Debug.Log(csvDatas[number][0]);
-        Debug.Log(csvDatas[number][1]);
+        quiz = csvDatas[number][0];
+        answer = csvDatas[number][1];
+        exm = int.Parse(csvDatas[number][2]);
+        word = csvDatas[number][3];
+        Debug.Log(quiz);
+        Debug.Log(exm);
+        Debug.Log(answer);
     }
 }

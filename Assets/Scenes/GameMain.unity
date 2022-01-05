@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 1320146443}
   - component: {fileID: 1320146442}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 1974774386}
   - component: {fileID: 1974774385}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: csvreader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -622,6 +622,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   csvFile: {fileID: 4900000, guid: a5707b7a93973294b9c0a96a98c38708, type: 3}
   textUI: {fileID: 109098164}
+  quiz: 
+  answer: 
+  playeranswer: 
 --- !u!4 &1974774386
 Transform:
   m_ObjectHideFlags: 0
