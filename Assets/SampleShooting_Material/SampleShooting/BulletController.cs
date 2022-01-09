@@ -19,8 +19,11 @@ public class BulletController : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D coll) {
         // 爆発エフェクトを生成する	
-        Instantiate (explosionPrefab, transform.position, Quaternion.identity);
-		Destroy (coll.gameObject);	
-		Destroy (gameObject);
+        if (coll.gameObject.name == "Rockprefab(Clone)")
+        {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(coll.gameObject);
+            Destroy(gameObject);
+        }
 	}
 }

@@ -5,7 +5,7 @@ public class RockGenerator : MonoBehaviour {
 
 	public GameObject rockPrefab;
 
-	void Start () {
+	void Awake () {
 		InvokeRepeating ("GenRock", 1, 1);
 	}
 	

@@ -14,10 +14,12 @@ public class RockController : MonoBehaviour {
     public string comment;
 
     GameObject csvreader;
+    GameObject rocket;
     csvread script;
 
     void Start() {
         csvreader = GameObject.Find("csvreader");
+        rocket = GameObject.Find("rocket");
         script = csvreader.GetComponent<csvread>();
 
         var randomnumber = UnityEngine.Random.Range(0, script.word.Count());
@@ -45,17 +47,21 @@ public class RockController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D coll)
     {
         script.playeranswer += comment;
+        csvreader.GetComponent<csvread>().ChangeAnswer();
         Debug.Log(script.playeranswer);
         if(script.exm == script.playeranswer.Length)
         {
-            if(script.answer == script.playeranswer)
-            {
-                script.playeranswer = "";
-                SceneManager.LoadScene("GameMain");
-            }
             if(script.answer != script.playeranswer)
             {
+                rocket.GetComponent<RocketController>().clearAccess();
+                FadeController.isFadeOut = true;
+                csvreader.GetComponent<csvread>().DelayendMethod();
+            }
+            if(script.answer == script.playeranswer)
+            {
+                rocket.GetComponent<RocketController>().IclearAccess();
                 script.playeranswer = "";
+                csvreader.GetComponent<csvread>().ChangeAnswer();
             }
         }
     }
